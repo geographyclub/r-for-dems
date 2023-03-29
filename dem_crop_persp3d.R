@@ -20,7 +20,7 @@ z[which(z == 0)] <- NA
 
 col <- colorRampPalette(cpt(n=100, pal='ncl_topo_15lev'))
 
-r3dDefaults$windowRect <- c(50,50, 700, 700)
+#r3dDefaults$windowRect <- c(50,50, 700, 700)
 expand = 0.005
 resfac = 0.1
 
