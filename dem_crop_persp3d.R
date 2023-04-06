@@ -11,7 +11,7 @@ dem <- setMinMax(dem)
 
 # mask
 mask <- countries[countries$NAME == "Brazil",]
-dem <- mask(dem, mask)
+#dem <- mask(dem, mask)
 dem <- crop(dem, mask)
 
 # resample
@@ -35,11 +35,11 @@ col <- colorRampPalette(cpt(n=100, pal='ncl_topo_15lev'))
 
 # plot
 r3dDefaults$windowRect <- c(50,50, 700, 700)
-expand = 0.01
+expand = 0.005
 resfac = 1
 
 #file = paste("topo_brazil_persp3d_", system('date +%Y%m%d%H%M%S', intern=TRUE) ,".png", sep="")
 #png(file, bg='transparent')
 persp3D(x, y, z, bty='n', colkey=FALSE, resfac=resfac, expand=expand, scale=FALSE, facets=FALSE, curtain=FALSE, lighting=TRUE, smooth=FALSE, inttype=2, breaks=NULL, colvar=z, NAcol=NA, col=col(100), border='black', lwd=0.1, alpha=1, shade=1, lphi=0, ltheta=0, add=FALSE, plot=TRUE)
-plotdev(theta=-10, phi=80)
+plotdev(theta=-20, phi=70)
 #dev.off()
